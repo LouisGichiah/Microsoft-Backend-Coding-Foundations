@@ -13,9 +13,9 @@ class InventoryManager
         {
             Console.WriteLine("\nInventor Manager Menu");
             Console.WriteLine("1. Add New product");
-            Console.WriteLine("2. Remove Products");
-            Console.WriteLine("3. Update stock");
-            Console.WriteLine("4. View products in stock");
+            Console.WriteLine("2. View products in stock");
+            Console.WriteLine("3. Remove Products");
+            Console.WriteLine("4. Update stock");
             Console.WriteLine("5. Exit");
             Console.WriteLine("\n Please select an option 1-5");
             string selectOption=Console.ReadLine();
