@@ -97,43 +97,41 @@ class InventoryManager
                     }
             }
             static void removeProduct()
-{
-    if (products.Count == 0)
-    {
-        Console.WriteLine("No products available to remove.");
-        return;
-    }
+            {
+                if (products.Count == 0)
+                {
+                        Console.WriteLine("No products available to remove.");
+                        return;
+                }
 
-    Console.WriteLine("Select a product to remove:");
-    for (int i = 0; i < products.Count; i++)
-    {
-        Console.WriteLine($"{i + 1}. {products[i]} - Price: {productPrices[i]}, Quantity: {productQuantities[i]}");
-    }
+                Console.WriteLine("Select a product to remove:");
+                    for (int i = 0; i < products.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {products[i]} - Price: {productPrices[i]}, Quantity: {productQuantities[i]}");
+                        }
 
-    Console.Write("Enter the product number to remove: ");
-    if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 1 || choice > products.Count)
-    {
-        Console.WriteLine("Invalid selection.");
-        return;
-    }
+                Console.Write("Enter the product number to remove: ");
+                    if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 1 || choice > products.Count)
+                        {
+                            Console.WriteLine("Invalid selection.");
+                            return;
+                        }
+                int index = choice - 1;
+                Console.WriteLine($"Are you sure you want to remove {products[index]}? (yes/no)");
+                string confirmation = Console.ReadLine().Trim().ToLower();
 
-    int index = choice - 1;
-    Console.WriteLine($"Are you sure you want to remove {products[index]}? (yes/no)");
-    string confirmation = Console.ReadLine().Trim().ToLower();
-
-    if (confirmation == "yes")
-    {
-        products.RemoveAt(index);
-        productPrices.RemoveAt(index);
-        productQuantities.RemoveAt(index);
-        Console.WriteLine("Product removed successfully.");
-    }
-    else
-    {
-        Console.WriteLine("Product removal cancelled.");
-    }
-}
-
+                    if (confirmation == "yes")
+                        {
+                            products.RemoveAt(index);
+                            productPrices.RemoveAt(index);
+                            productQuantities.RemoveAt(index);
+                            Console.WriteLine("Product removed successfully.");
+                        }
+                    else
+                        {
+                            Console.WriteLine("Product removal cancelled.");
+                        }
+            }
             static void updateStock()
             {
                  if (products.Count == 0)
