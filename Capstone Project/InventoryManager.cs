@@ -45,7 +45,7 @@ class InventoryManager
                 default:
                 Console.WriteLine("Please enter a valid selection");
                 break;
-            } //
+            } 
             static void addProduct()
             {
                 while(true)
