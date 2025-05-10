@@ -143,7 +143,7 @@ class InventoryManager
                 Console.WriteLine("Select a product to update stock:");
                         for (int i = 0; i < products.Count; i++)
                                  {
-                                     Console.WriteLine($"{i +           1}. {products[i]} -                 Current Quantity:           {productQuantities[i]}");
+                                     Console.WriteLine($"{i +1}. {products[i] } - Current Quantity: {productQuantities[i]}");
                                 }
 
                 Console.Write("Enter the product number: ");
@@ -171,25 +171,25 @@ class InventoryManager
                          return;
                          }
 
-                  int currentQty = int.Parse(productQuantities[index]);
+                  int currentQuantity = int.Parse(productQuantities[index]);
 
                        if (action == "sell")
                              {
-                                 if (amount > currentQty)
+                                 if (amount > currentQuantity)
                              {
                         Console.WriteLine("Not enough stock to sell that amount.");
                         return;
                      }
 
-                 currentQty -= amount;
+                 currentQuantity -= amount;
                      }
                    else if (action == "restock")
                           {
-                          currentQty += amount;
+                          currentQuantity += amount;
                           }
 
-                 productQuantities[index] = currentQty.ToString();
-                         Console.WriteLine($"Stock updated. New quantity for {products[index]}: {currentQty}");
+                 productQuantities[index] = currentQuantity.ToString();
+                         Console.WriteLine($"Stock updated. New quantity for {products[index]}: {currentQuantity}");
             }
     
         }
