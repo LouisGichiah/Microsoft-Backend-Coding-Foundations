@@ -29,8 +29,8 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Dog myDog = new Dog();
-        Cat myCat = new Cat();
+        Dog myDog = new Dog(); //creates an instance (object) of the Dog class and assigns it to the variable myDog. new Dog() - calls the constructor of the Dog class 
+        Cat myCat = new Cat(); //creates an instance (object) of the Cat class and assigns it to the variable myCat. new Cat() - calls the constructor of the Cat class 
         
         myDog.MakeSound(); // Should print "Bark"
         myCat.MakeSound(); // Should print "Meow"
